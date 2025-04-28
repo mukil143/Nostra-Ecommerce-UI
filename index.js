@@ -49,3 +49,24 @@ leftsidebtn.addEventListener("click", function () {
     slideimg.style.marginLeft = `-${slidemargin}vw`; //changing the margin left of the slider images container to -slidemargin px
   }
 });
+
+// fav item like function
+
+let emptyheart = document.querySelectorAll(
+  ".mostwanted-product-item-emptyheart"
+);//selecting the all emptyheart
+
+console.log(emptyheart);
+
+for (let count = 0; count < emptyheart.length; count++) {
+  emptyheart[count].addEventListener("click", function (e) {
+    if (e.target.src.indexOf("blackheart") > 0) {
+      e.target.src = "./icons/redheart.png";
+    } else {
+     e.target.src = "./icons/blackheart.png";
+    }
+  });
+}
+
+
+
