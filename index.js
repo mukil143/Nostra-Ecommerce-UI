@@ -19,9 +19,25 @@ resetScrollOnReload();
 
 let offerclosebtn = document.getElementById("head-offertitle-close"); //selecting the clos button
 
+
+
+
+let offermsg=document.querySelector(".head-offers-msg"); //selecting the offer message
+
+let navbar=document.querySelector("nav");
+
 offerclosebtn.addEventListener("click", function () {
-  offerclosebtn.parentNode.parentNode.remove();
+  let offerbox=document.getElementById("head-offers");
+  let offermsg=document.querySelector(".head-offers-msg"); //selecting the offer box
+  offerbox.classList.add("hidden");
+  offermsg.classList.add("hidden"); //adding the hidden class to the offer box to hide it
+  setTimeout(() => {
+    offerbox.style.display = 'none'; 
+    offermsg.style.display = 'none';// fully removes it from flow after transition
+  }, 1000); // match this to your CSS transition duration
 });
+
+
 
 let toggltbtn = document.getElementById("navbar-toggle"); //selecting the toggle button
 

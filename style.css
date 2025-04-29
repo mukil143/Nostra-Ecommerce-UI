@@ -22,6 +22,15 @@ body {
   font-size: 1.5vw;
   padding: 4px;
   text-align: center;
+  transition: all 1000ms linear;
+}
+
+.head-offers.hidden {
+  max-height: 0;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(-100%);
+  
 }
 
 .head-offers i {
@@ -37,6 +46,10 @@ nav {
   position: sticky;
   top: 0px;
   z-index: 50;
+}
+
+nav h1{
+  font-size: 2.5vw;
 }
 
 .navbar-links {
@@ -95,19 +108,9 @@ nav {
   text-align: right;
 }
 
-@media screen and (max-width: 909px) {
-  .navbar-links {
-    display: none;
-  }
 
-  #navbar-toggle {
-    display: block;
-    cursor: pointer;
-  }
-}
 
-@media screen and (max-width: 600px) {
-}
+
 
 @media screen and (min-width: 909px) {
   #sidenavbar {
@@ -515,4 +518,51 @@ footer p {
 .reveal-scroll-animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .head-offers{
+    font-size: 3vw;
+  }
+  .brand-item img {
+    width: 5vw;
+    align-items: center;
+  }
+  
+  .brand-item p {
+    font-size: 2.5vw;
+    font-weight: lighter;
+  }
+
+  .services-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1%;
+  }
+
+  .services-about-1 {
+    font-size: 2.3vw;
+    font-weight: bold;
+  }
+  
+  .services-about-2 {
+    font-size: 1.8vw;
+    text-align: right;
+  }
+}
+
+
+@media screen and (max-width: 909px) {
+  .navbar-links {
+    display: none;
+  }
+
+  #navbar-toggle {
+    display: block;
+    cursor: pointer;
+  }
 }
