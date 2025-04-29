@@ -338,7 +338,7 @@ nav {
   border-radius: 5px;
   border: none;
   background-color: white;
-  color:black ;
+  color: black;
 }
 
 /* /* MostWanted  */
@@ -503,4 +503,16 @@ footer p {
   font-size: 2vw;
   gap: 2vw;
   margin-top: 1.5vw;
+}
+
+.intiate-scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* smoother easing */
+  will-change: opacity, transform; /* performance optimization */
+}
+
+.reveal-scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
 }

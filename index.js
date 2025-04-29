@@ -1,3 +1,22 @@
+function resetScrollOnReload() {
+  // Disable browser's automatic scroll restoration
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Scroll to top when the page loads
+  window.addEventListener('load', function () {
+    window.scrollTo(0, 0);
+  });
+}
+
+// Call the function when your script loads
+resetScrollOnReload();
+
+
+
+
+
 let offerclosebtn = document.getElementById("head-offertitle-close"); //selecting the clos button
 
 offerclosebtn.addEventListener("click", function () {
@@ -70,3 +89,21 @@ for (let count = 0; count < emptyheart.length; count++) {
 
 
 
+// scroll animation
+
+window.addEventListener("scroll", function () {
+  const elements = document.querySelectorAll(".intiate-scroll-animate");
+
+  elements.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elTop = el.getBoundingClientRect().top;
+
+    if (elTop < windowHeight - 100 && !el.classList.contains("reveal-scroll-animate")) {
+      el.classList.add("reveal-scroll-animate");
+    }
+  });
+});
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
