@@ -1,3 +1,28 @@
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const headerOffset = 100; // Adjust this height based on your header/nav
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
 function resetScrollOnReload() {
   // Disable browser's automatic scroll restoration
   if ('scrollRestoration' in history) {
@@ -107,19 +132,46 @@ for (let count = 0; count < emptyheart.length; count++) {
 
 // scroll animation
 
-window.addEventListener("scroll", function () {
+// window.addEventListener("scroll", function () {
+//   const elements = document.querySelectorAll(".intiate-scroll-animate");
+
+//   elements.forEach((el) => {
+//     const windowHeight = window.innerHeight;
+//     const elTop = el.getBoundingClientRect().top;
+
+//     if (elTop < windowHeight - 50 && !el.classList.contains("reveal-scroll-animate")) {
+//       el.classList.add("reveal-scroll-animate");
+//     }
+//   });
+// });
+
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
+
+
+function revealOnScroll() {
   const elements = document.querySelectorAll(".intiate-scroll-animate");
 
   elements.forEach((el) => {
     const windowHeight = window.innerHeight;
     const elTop = el.getBoundingClientRect().top;
 
-    if (elTop < windowHeight - 100 && !el.classList.contains("reveal-scroll-animate")) {
+    if (elTop < windowHeight - 50 && !el.classList.contains("reveal-scroll-animate")) {
       el.classList.add("reveal-scroll-animate");
     }
   });
-});
+}
 
+// Run on scroll
+window.addEventListener("scroll", revealOnScroll);
+
+// Also run on page load
+window.addEventListener("load", revealOnScroll);
+
+// Reset scroll on refresh
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
+
