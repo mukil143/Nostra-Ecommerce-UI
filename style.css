@@ -660,6 +660,12 @@ aside {
 .product-item-cost {
   font-size: 2.5vw;
 }
+.product-item-title{
+
+  height: 40px; /* Adjust this based on your tallest title */
+    overflow: hidden;
+    text-align: center;
+}
 
 .product-item-purchase button {
   font-size: 1.5vw;
@@ -723,11 +729,23 @@ footer {
   .searchbar input {
     font-size: 3vw;
   }
+  .product-item-title{
+
+    height: 15px; /* Adjust this based on your tallest title */
+      overflow: hidden;
+      text-align: center;
+  }
 }
 @media screen and (min-width:375px) {
   .products-container {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 0.6rem;
+  }
+  .product-item-title{
+
+    height: 25px; /* Adjust this based on your tallest title */
+      overflow: hidden;
+      text-align: center;
   }
   .product-item-purchase button {
     font-size: 2.5vw;
@@ -899,11 +917,11 @@ footer {
     margin-top: 20px;
   }
   .products-container {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4.50rem;
   }
   .product-item-purchase button {
-    font-size: 0.8vw;
+    font-size: 1vw;
   }
   aside {
     font-size: 1.2vw;
@@ -927,6 +945,8 @@ footer {
   .product-item-purchase{
     display: flex;
     gap: 5px;
+    justify-content: center;
+
   }
 
 
@@ -962,6 +982,13 @@ footer {
   .products-container::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+  }
+
+  .product-item-title{
+
+    height: 30px; /* Adjust this based on your tallest title */
+      overflow: hidden;
+      text-align: center;
   }
   
 }

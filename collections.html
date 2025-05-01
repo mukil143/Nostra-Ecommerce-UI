@@ -60,7 +60,7 @@
         <i id="sidenavbar-closebtn" class="fa-solid fa-xmark"></i>
       </p>
       <div class="sidenavbar-links">
-        <a href=".newarrrival-conitainer" class="sidenavbar-link">Home</a>
+        <a href="./index.html" class="sidenavbar-link">Home</a>
         <a href="#new-arrival" class="sidenavbar-link">New Arrival</a>
         <a href="#most-wanted" class="sidenavbar-link">Most Wanted</a>
         <a href="./collections.html" class="sidenavbar-link">Collections</a>
@@ -76,23 +76,27 @@
             </div>
             
         </section>
-        <aside>
+        <aside class="filters">
             <div class="category-container">
                 <h2>Occasion</h2>
                 <div class="categories">
                     <div class="categories-item">
+                        <input class="occasion" value="formal" type="checkbox" name="ocassion" id="formal">
+                        <label for="formal">Office</label><br>
+                    </div>
+                    <div class="categories-item">
 
-                        <input type="checkbox" name="ocassion" id="summer">
+                        <input class="occasion" value="summer" type="checkbox" name="ocassion" id="summer">
                         <label for="summer">Summer</label><br>
                     </div>
                     <div class="categories-item">
 
-                        <input type="checkbox" name="ocassion" id="party">
+                        <input class="occasion" value="party" type="checkbox" name="ocassion" id="party">
                         <label for="party">Party</label><br>
                     </div>
                     <div class="categories-item">
 
-                        <input type="checkbox" name="ocassion" id="beach">
+                        <input  class="occasion" value="beach" type="checkbox" name="ocassion" id="beach">
                         <label for="beach">Beach</label><br>
                     </div>
                 </div>
@@ -102,22 +106,22 @@
                 <div class="categories">
                     <div class="categories-item">
                         
-                        <input type="checkbox" name="color" id="red">
+                        <input  class="color" value="red" type="checkbox" name="color" id="red">
                         <label for="red">Red</label><br>
                     </div>
                     <div class="categories-item">
 
-                        <input type="checkbox" name="color" id="blue">
+                        <input  class="color" value="blue" type="checkbox" name="color" id="blue">
                         <label for="blue">Blue</label><br>
                     </div>
                     <div class="categories-item">
 
-                        <input type="checkbox" name="color" id="green">
+                        <input  class="color" value="green" type="checkbox" name="color" id="green">
                         <label for="green">Green</label><br>
                     </div>
                     <div class="categories-item">
 
-                        <input type="checkbox" name="color" id="white">
+                        <input class="color" value="white" type="checkbox" name="color" id="white">
                         <label for="yellow">White</label><br>
                     </div>
                 </div>
@@ -126,11 +130,11 @@
                 <h2>Arrivals</h2>
                 <div class="categories">
                     <div class="categories-item" >
-                        <input type="checkbox" name="arrival" id="new">
+                        <input type="checkbox" value="new" name="arrival" id="new" class="arrival">
                         <label for="new">New</label>
                     </div>
                     <div class="categories-item">
-                        <input type="checkbox" name="arrival" id="old">
+                        <input class="arrival" value="old" type="checkbox" name="arrival" id="old">
                         <label for="old">Old</label><br>
                     </div>
                 
@@ -140,9 +144,9 @@
         </aside>
 
         <section class="products-container">
-            
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
+            <!-- 1 -->
+            <div class="product-item" data-occasion="summer" data-color="red" data-arrival="old">
+                <img  class="product-item-img"    src="./products/f1.png" alt="">
                 <h2 class="product-item-title" >Floral summer shirt</h2>
                 <p class="product-item-cost" >₹200</p>
                 <div class="product-item-purchase">
@@ -151,9 +155,43 @@
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
+            <!-- 2 -->
+            <div class="product-item" data-occasion="beach"  data-color="green" data-arrival="old">
+                <img class="product-item-img" src="./products/f2.png" alt="">
+                <h2 class="product-item-title" >Tropical Beach Shirt</h2>
+                <p class="product-item-cost" >₹400</p>
+                <div class="product-item-purchase">
+                    <button class="product-item-cart">Add to cart</button>
+                    <button class="product-item-buy">Buy Now</button>
+                </div>
+
+            </div>
+            <!-- 3 -->
+            <div class="product-item" data-occasion="party"  data-color="red" data-arrival="new">
+                <img class="product-item-img" src="./products/f3.png" alt="">
+                <h2 class="product-item-title" > Printed Casual Shirt</h2>
+                <p class="product-item-cost" >₹589</p>
+                <div class="product-item-purchase">
+                    <button class="product-item-cart">Add to cart</button>
+                    <button class="product-item-buy">Buy Now</button>
+                </div>
+
+            </div>
+            <!-- 4 -->
+            <div class="product-item" data-occasion="beach"  data-color="blue" data-arrival="new">
+                <img class="product-item-img" src="./products/f9.png" alt="">
+                <h2 class="product-item-title" >Beachwear Shirt</h2>
+                <p class="product-item-cost" >₹399</p>
+                <div class="product-item-purchase">
+                    <button class="product-item-cart">Add to cart</button>
+                    <button class="product-item-buy">Buy Now</button>
+                </div>
+
+            </div>
+            <!-- 5 -->
+            <div class="product-item" data-occasion="party"  data-color="white" data-arrival="new">
+                <img class="product-item-img" src="./products/f10.png" alt="">
+                <h2 class="product-item-title" >Party Casual Shirt</h2>
                 <p class="product-item-cost" >₹200</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
@@ -161,9 +199,10 @@
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
+            <!-- 6 -->
+            <div class="product-item" data-occasion="summer" data-occasion="summer" data-color="blue" data-arrival="new">
+                <img class="product-item-img" src="./products/f11.png" alt="">
+                <h2 class="product-item-title" >Summer layer shirt</h2>
                 <p class="product-item-cost" >₹200</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
@@ -171,9 +210,21 @@
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
+            <!-- 7 -->
+            <div class="product-item" data-occasion="beach" data-color="green" data-arrival="old">
+                <img class="product-item-img" src="./products/f12.png" alt="">
+                <h2 class="product-item-title" >Abstract Print Shirt</h2>
+                <p class="product-item-cost" >₹690</p>
+                <div class="product-item-purchase">
+                    <button class="product-item-cart">Add to cart</button>
+                    <button class="product-item-buy">Buy Now</button>
+                </div>
+
+            </div>
+            <!-- 8 -->
+            <div class="product-item" data-occasion="party" data-color="red" data-arrival="new">
+                <img class="product-item-img" src="./products/f13.png" alt="">
+                <h2 class="product-item-title" >Mens Rayon Casual Shirt</h2>
                 <p class="product-item-cost" >₹200</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
@@ -181,9 +232,32 @@
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
+            <!-- 9 -->
+            <div class="product-item" data-occasion="beach" data-color="red" data-arrival="old">
+                <img class="product-item-img" src="./products/f14.png" alt="">
+                <h2 class="product-item-title" >Printed lycra shirt</h2>
+                <p class="product-item-cost" >₹500</p>
+                <div class="product-item-purchase">
+                    <button class="product-item-cart">Add to cart</button>
+                    <button class="product-item-buy">Buy Now</button>
+                </div>
+
+            </div>
+            <!-- 10 -->
+            <div class="product-item" data-occasion="party" data-color="blue" data-arrival="old">
+                <img class="product-item-img" src="./products/f15.png" alt="">
+                <h2 class="product-item-title" > Half Sleeve Lycra Shirt</h2>
+                <p class="product-item-cost" >₹499</p>
+                <div class="product-item-purchase">
+                    <button class="product-item-cart">Add to cart</button>
+                    <button class="product-item-buy">Buy Now</button>
+                </div>
+
+            </div>
+            <!-- 11 -->
+            <div class="product-item" data-occasion="beach" data-color="green" data-arrival="new">
+                <img class="product-item-img" src="./products/f16.png" alt="">
+                <h2 class="product-item-title" >Mens slimfit shirt</h2>
                 <p class="product-item-cost" >₹200</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
@@ -191,9 +265,10 @@
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
+            <!-- 12 -->
+            <div class="product-item" data-occasion="beach" data-color="white" data-arrival="new">
+                <img class="product-item-img" src="./products/f17.png" alt="">
+                <h2 class="product-item-title" >casual printed shirt</h2>
                 <p class="product-item-cost" >₹200</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
@@ -201,70 +276,66 @@
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
-                <p class="product-item-cost" >₹200</p>
+            <!-- 13 -->
+            <div class="product-item" data-occasion="formal" data-color="" data-arrival="new">
+                <img class="product-item-img" src="./products/fs1.png" alt="">
+                <h2 class="product-item-title" >Black formal shirt</h2>
+                <p class="product-item-cost" >₹599</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
                     <button class="product-item-buy">Buy Now</button>
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
-                <p class="product-item-cost" >₹200</p>
+            <!-- 14 -->
+            <div class="product-item" data-occasion="formal" data-color="blue" data-arrival="new">
+                <img class="product-item-img" src="./products/fs2.png" alt="">
+                <h2 class="product-item-title" >light-blue formal shirt</h2>
+                <p class="product-item-cost" >₹599</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
                     <button class="product-item-buy">Buy Now</button>
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
-                <p class="product-item-cost" >₹200</p>
+            <!-- 15 -->
+            <div class="product-item" data-occasion="formal" data-color="blue" data-arrival="old">
+                <img class="product-item-img" src="./products/fs3.png" alt="">
+                <h2 class="product-item-title" >purple cherked formal shirt</h2>
+                <p class="product-item-cost" >₹599</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
                     <button class="product-item-buy">Buy Now</button>
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
-                <p class="product-item-cost" >₹200</p>
+            <!-- 16 -->
+            <div class="product-item" data-occasion="formal" data-color="blue" data-arrival="new">
+                <img class="product-item-img" src="./products/n1.png" alt="">
+                <h2 class="product-item-title" >chinese colar shirt</h2>
+                <p class="product-item-cost" >₹599</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
                     <button class="product-item-buy">Buy Now</button>
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
-                <p class="product-item-cost" >₹200</p>
+            <!-- 17 -->
+            <div class="product-item" data-occasion="formal" data-color="red" data-arrival="new">
+                <img class="product-item-img" src="./products/sfs1.png" alt="">
+                <h2 class="product-item-title" >semi formal shirt</h2>
+                <p class="product-item-cost" >₹599</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
                     <button class="product-item-buy">Buy Now</button>
                 </div>
 
             </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
-                <p class="product-item-cost" >₹200</p>
-                <div class="product-item-purchase">
-                    <button class="product-item-cart">Add to cart</button>
-                    <button class="product-item-buy">Buy Now</button>
-                </div>
-
-            </div>
-            <div class="product-item">
-                <img class="product-item-img" src="./products/f1.jpg" alt="">
-                <h2 class="product-item-title" >Floral summer shirt</h2>
-                <p class="product-item-cost" >₹200</p>
+            <!-- 18 -->
+            <div class="product-item" data-occasion="formal" data-color="blue" data-arrival="new">
+                <img class="product-item-img" src="./products/fs4.png" alt="">
+                <h2 class="product-item-title" >Striped formal shirt</h2>
+                <p class="product-item-cost" >₹599</p>
                 <div class="product-item-purchase">
                     <button class="product-item-cart">Add to cart</button>
                     <button class="product-item-buy">Buy Now</button>
@@ -289,5 +360,6 @@
       </div>
       <p>@2025 Nostra.com</p>
     </footer>
+    <script src="./collections.js"></script>
   </body>
 </html>
