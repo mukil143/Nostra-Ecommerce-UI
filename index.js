@@ -78,6 +78,10 @@ closbtn.addEventListener("click", function () {
   sidenavbar.style.transform = "translateX(-100%)"; //transforming the sidenavbar to -100% to hide it
 });
 
+
+
+
+
 let leftsidebtn = document.getElementById("slider-leftarrow-activate"); //selecting the lefte arrow btn
 
 let rightsidebtn = document.getElementById("slider-rightarrow"); //selecting thr right arrow
